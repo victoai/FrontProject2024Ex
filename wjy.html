@@ -26,6 +26,25 @@
         header{
             padding: 10px;
             border:1px solid black;
+            height: 50px;
+            background-color: pink;
+            font-size: 12px;
+
+
+            /*부모지정*/
+            position: relative;
+
+
+        }
+
+        header .title{
+
+            /* header기준으로 title을 원하는 위치에 배치하기*/
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
+
+            border: 1px solid black;
         }
 
         section{
@@ -49,7 +68,7 @@
     <div class="wrap">
         
         <header>          
-            잼나는 드라마 소개
+              <div class="title">잼나는 드라마 소개  <br> 선재&솔 🥰 </div>     
         </header>
         
         <section>     
