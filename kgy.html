@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Playground</h1>
+    <p>아래의 텍스트 상자에 JavaScript 코드를 작성하고 '실행' 버튼을 눌러 결과를 확인해보세요.</p>
+    <textarea id="code" rows="10" cols="50"></textarea><br>
+    <button onclick="runCode()">실행</button>
+    <div id="output"></div>
+
+    <script>
+        function runCode() {
+            let code = document.getElementById('code').value;
+            let output = document.getElementById('output');
+            try {
+                let result = eval(code);
+                output.textContent = '결과: ' + result;
+            } catch (error) {
+                output.textContent = '에러: ' + error;
+            }
+        }
+    </script>
+</body>
+
+</html>
